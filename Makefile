@@ -873,4 +873,4 @@ clean_shell_cmd:
 	del raygui.c /s & \
 
 main: main.c
-	gcc -o main main.c
+	gcc -o main main.c -lraylib -lGL -lm -lpthread -ldl -lrt -lX11

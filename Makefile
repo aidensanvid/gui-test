@@ -871,6 +871,3 @@ clean_shell_cmd:
 	del lib$(RAYLIB_LIB_NAME)dll.a /s & \
 	del $(RAYLIB_LIB_NAME).dll /s & \
 	del raygui.c /s & \
-
-main: main.c
-	gcc main.c -o main

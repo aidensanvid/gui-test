@@ -11,8 +11,7 @@ jobs:
     - uses: actions/checkout@v4
 
     - name: Install Raylib and Run Makefile
-      run: sudo apt install libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev; make  PLATFORM=PLATFORM_DESKTOP  GRAPHICS=GRAPHICS_API_OPENGLES_20 RAYLIB_LIBTYPE=SHARED USE_EXTERNAL_GLFW=TRUE \
-    CFLAGS="-fPIC -I/usr/include/GL" LDFLAGS='-L/usr/local/lib/raysan5 -lGLESv2 -lglfw3';
+      run: sudo apt install libasound2-dev libx11-dev libxrandr-dev libxi-dev libgl1-mesa-dev libglu1-mesa-dev libxcursor-dev libxinerama-dev libwayland-dev libxkbcommon-dev; make PLATFORM=PLATFORM_DESKTOP;
     
     - name: Upload GUI Executable
       if: ${{ always() }}

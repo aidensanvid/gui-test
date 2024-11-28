@@ -52,11 +52,11 @@
 #if defined(_WIN32) || defined(__CYGWIN__)
     #define _GLFW_WIN32
 #endif
-#if defined(__linux__)
-    #if !defined(_GLFW_WAYLAND) && !defined(_GLFW_X11)
-        #error "Cannot disable Wayland and X11 at the same time"
-    #endif
-#endif
+// #if defined(__linux__)
+//     #if !defined(_GLFW_WAYLAND) && !defined(_GLFW_X11)
+//         #error "Cannot disable Wayland and X11 at the same time"
+//     #endif
+// #endif
 #if defined(__FreeBSD__) || defined(__OpenBSD__) || defined(__NetBSD__) || defined(__DragonFly__)
     #define _GLFW_X11
 #endif

@@ -1,2 +1,11 @@
+CC = gcc
+CFLAGS = -O1 -Wall -std=c99 -Wno-missing-braces
+LIB = lib/
+INCLUDE = include/
+LINKERS = -lraylib -lopengl32 -lgdi32 -lwinmm #-mwindows
+
+SRC = src/*.c
+OUT = main
+
 build:
-	gcc main.c -o main -O1 -Wall -std=c99 -Wno-missing-braces -I ./include/ -L ./lib/ -lraylib -lopengl32 -lgdi32 -lwinmm
+	$(CC) $(SRC) -o $(OUT) $(CFLAGS) -I $(INCLUDE) -L $(LIB) $(LINKERS)

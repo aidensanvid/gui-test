@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Run Tests
+    - name: Install Raylib and Run Makefile
       run: sudo add-apt-repository ppa:texus/raylib; sudo apt install libraylib5-dev; make;
     
     - name: Upload GUI Executable
@@ -19,4 +19,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: GUI Executable
-        path: ./main
+        path: ./main.exe

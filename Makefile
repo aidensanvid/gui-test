@@ -1,2 +1,2 @@
-brew install raylib
-gcc main.c -lraylib -o main
+main: main.c
+	gcc main.c -lraylib -o main

@@ -1,4 +1,4 @@
-#include "../../raylib/src/raylib.h"
+#include "raylib.h"
 #include <string.h>
 #include <stdio.h>
 #include "../../include/macros.h"

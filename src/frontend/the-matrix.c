@@ -1,4 +1,6 @@
 #include "raylib.h"
+#include <string.h>
+#include <stdio.h>
 #include "../../include/gui.h"
 #include "../../include/macros.h"
 #include "../../include/tile_generation.h"

@@ -1,6 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "macros.h"
+#include "../../include/macros.h"
 
 void slideRight(int new_array[gridROWS][gridCOLS], int k){
 

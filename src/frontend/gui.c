@@ -93,8 +93,8 @@ void display2048GUI(const int screenHeight, const int screenWidth, const int gam
             int centerX = screenWidth * 0.5 + fontAdjustX * strlen(score);
             int centerY = screenHeight * 0.04;
                 
-            DrawText(score, centerX + 3, centerY + 3, fontSize, DARKBROWN);
-            DrawText(score, centerX, centerY, fontSize, WHITE);
+            //DrawText(score, centerX + 3, centerY + 3, fontSize, DARKBROWN);
+            //DrawText(score, centerX, centerY, fontSize, WHITE);
 
             DrawRectangle(currentX, currentY, tileWidth, tileHeight, EMPTY_TILE);
 
@@ -136,6 +136,8 @@ void display2048GUI(const int screenHeight, const int screenWidth, const int gam
             default:
                 break;
             }
+
+            DrawRectangle(50, 50, 100, 100, DARKBROWNc);
 
             if (grid[row][col] != 0) {
 

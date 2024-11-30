@@ -146,8 +146,8 @@ void display2048GUI(const int screenHeight, const int screenWidth, const int gam
                 centerX = (int) (currentX + (double)tileWidth / 2 + fontAdjustX * strlen(string));
                 centerY = (int) (currentY + (double)tileHeight / 2 + fontAdjustY);
                 
-                displayText(string, centerX + 3, centerY + 3, DARKBROWNc);
-                displayText(string, centerX, centerY, WHITEc); 
+                displayText(string, 50 + 3, 50 + 3, DARKBROWNc);
+                displayText(string, 50, 50, WHITEc); 
                 
             
             }

@@ -1,11 +1,7 @@
 #include "raylib.h"
-#include <string.h>
-#include <stdio.h>
-#include "../../include/gui.h"
-#include "../../include/macros.h"
-#include "../../include/tile_generation.h"
-#include "../../include/merge.h"
-#include "../../include/slide.h"
+#include "gui.h"
+#include "macros.h"
+#include "tile_generation.h"
 
 //----------------------- -------------------------------------------------------------
 // Program main entry point
@@ -45,9 +41,12 @@ int main(int argc, char *argv[])
         const int tileHeight = (int)((double)(gameHeight - border * 2) / (double)gridRows - (double)(2 * tilePadding));
 
 
-        int grid[gridRows][gridCols];
+        int grid[gridRows][gridCols] = { {4, 8, 16, 32},
+            {64, 128, 256, 512},
+            {1024, 2048, 3, 9},
+            {7, 5, 1, 0} };
 
-        initializeGrid(grid);
+        //initializeGrid(grid);
 
         InitWindow(screenWidth, screenHeight, "The Matrix");
 
@@ -57,6 +56,8 @@ int main(int argc, char *argv[])
         // Main game loop
         while (!WindowShouldClose())    // Detect window close button or ESC key
         {
+
+            //int oldGrid[gridRows][gridCols] = grid;
 
             if (IsKeyPressed(KEY_RIGHT)) {
                 printf("Right");
@@ -76,6 +77,18 @@ int main(int argc, char *argv[])
             }
 
             display2048GUI(screenHeight, screenWidth, gameHeight, gameWidth, tilePadding, border, tileWidth, tileHeight, fontAdjustX, fontAdjustY, fontSize, grid);
+            
+
+            /*for (int row = 0; row < gridRows; row++) {
+                for (int col = 0; col < gridCols; col++) {
+
+                    if (oldGrid[row][col] == grid[row][col]) {
+
+                    }
+
+                }
+            }*/
+
 
         }
 

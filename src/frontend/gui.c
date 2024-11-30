@@ -137,14 +137,14 @@ void display2048GUI(const int screenHeight, const int screenWidth, const int gam
                 break;
             }
 
-            DrawRectangle(50, 50, 100, 100, DARKBROWNc);
+            //DrawRectangle(50, 50, 100, 100, DARKBROWNc);
 
             if (grid[row][col] != 0) {
 
                 sprintf(string, "%d", grid[row][col]);
 
-                centerX = currentX + (double)tileWidth / 2 + fontAdjustX * strlen(string);
-                centerY = currentY + (double)tileHeight / 2 + fontAdjustY;
+                centerX = (int) (currentX + (double)tileWidth / 2 + fontAdjustX * strlen(string));
+                centerY = (int) (currentY + (double)tileHeight / 2 + fontAdjustY);
                 
                 displayText(string, centerX + 3, centerY + 3, DARKBROWNc);
                 displayText(string, centerX, centerY, WHITEc); 

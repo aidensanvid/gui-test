@@ -1,6 +1,7 @@
 #include "raylib.h"
-#include "macros.h"
-#define SUPPORT_DEFAULT_FONT
+#include <string.h>
+#include <stdio.h>
+#include "../../include/macros.h"
 
 #define BACKGROUND (Color){188, 172, 159, 255}
 #define EMPTY_TILE (Color){204, 193, 180, 255}

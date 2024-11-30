@@ -17,7 +17,7 @@
 #define TILE1024   (Color){217, 167, 2, 255}
 #define TILE2048   (Color){54, 201, 24, 255}
 #define TEXTBLANK  (Color){0, 0, 0, 0}
-#define WHITEc (Color){0, 0, 0, 255}
+#define WHITEc (Color){255, 255, 255, 255}
 #define DARKBROWNc (Color){ 76, 63, 47, 255 } 
 
 void displayText(char * string, int x, int y, Color c) {
@@ -143,11 +143,11 @@ void display2048GUI(const int screenHeight, const int screenWidth, const int gam
 
                 sprintf(string, "%d", grid[row][col]);
 
-                centerX = (int) (currentX + (double)tileWidth / 2 + fontAdjustX * strlen(string));
-                centerY = (int) (currentY + (double)tileHeight / 2 + fontAdjustY);
+                centerX = (int) (currentX + tileWidth / 2 + fontAdjustX * strlen(string));
+                centerY = (int) (currentY + tileHeight / 2 + fontAdjustY);
                 
-                displayText(string, 50 + 3, 50 + 3, DARKBROWNc);
-                displayText(string, 50, 50, WHITEc); 
+                displayText(string, centerX + 3, centerY + 3, DARKBROWNc);
+                displayText(string, centerX, centerY, WHITEc); 
                 
             
             }
